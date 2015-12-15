@@ -1,0 +1,25 @@
+.item {
+	border-radius: 3px;
+	border: 1px solid #66CCFF;
+	margin: 10px;
+}
+
+img {
+	float: left;
+}
+
+.weather-description {
+	line-height: 50px;
+}
+
+.temp-eve {
+	font-size: 70px;
+}
+
+span {
+	font-size: 40px;
+	/*color :#00CC00;*/
+}
+/*body{
+	background: #F5F5DC;
+}*/

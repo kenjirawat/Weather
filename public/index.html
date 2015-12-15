@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/th.js"></script>
+	<script src="//code.jquery.com/jquery.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+
+  <title>Weather</title>
+
+</head>
+<body ng-controller="AppController" align="center">
+
+  <h1>{{data.city.name}}</h1><br>
+	
+  <div class="col-sm-3 item bg-info" ng-repeat="item in data.list">	   
+		  <!-- <p class="weather-description">{{item.weather[0].description}}</p> -->
+		  <h1 class="temp-eve"> {{formatTemp(item.temp.eve)}}<span>°C  <img ng-src="http://openweathermap.org/img/w/{{item.weather[0].icon}}.png" title="{{item.weather[0].description}}" >
+      </span></h1>
+     
+      <h4>{{formatDate(item.dt)}}</h4> 
+     
+	</div>
+</body>
+</html>
